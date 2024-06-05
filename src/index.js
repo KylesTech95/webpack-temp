@@ -1,12 +1,18 @@
-// DEMO JOKE APP
-import generateJoke from './generateJoke'
+// DEMO Numbers APP
+import generateNumber from './generateNumber'
 import './styles/main.scss'
-import laughing from './assets/laughing.svg'
+import nums from './assets/nums.png'
 
-const laughImg = document.getElementById('laughImg')
-laughImg.src = laughing
+const currentNumber = document.getElementById('number')
 
-const jokeBtn = document.getElementById('jokeBtn')
-jokeBtn.addEventListener('click', generateJoke)
+// image handled by webpack selection
+const numsImg = document.getElementById('numsImg')
+numsImg.src = nums
 
-generateJoke()
+// button
+const numsBtn = document.getElementById('numbtn')
+numsBtn.addEventListener('click', ()=>{
+    currentNumber.textContent = generateNumber()
+})
+currentNumber.textContent = generateNumber()
+
